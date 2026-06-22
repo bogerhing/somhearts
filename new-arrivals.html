@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Arrivals — Soma Hearts</title>
+  <meta name="description" content="Discover Soma Hearts' newest luxury nightwear. Fresh styles in satin, pajamas, robes, and sleep dresses.">
+  <link rel="icon" href="https://em-content.zobj.net/source/twitter/376/crescent-moon_1f319.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo" style="color:var(--charcoal);">Soma <span style="color:var(--champagne)">Hearts</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="new-arrivals.html" class="active">New Arrivals</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <a href="shop.html"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></a>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+<nav class="mobile-nav">
+  <button class="mobile-close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="new-arrivals.html">New Arrivals</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="margin-top:var(--nav-h);">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <span class="overline">Just Dropped</span>
+    <h1>New Arrivals</h1>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section--sm" style="background:var(--cream);padding:50px 0;">
+  <div class="container" style="text-align:center;">
+    <p style="font-family:var(--font-serif);font-size:1.25rem;font-weight:300;font-style:italic;color:var(--text-mid);max-width:600px;margin:0 auto;line-height:1.9;">
+      "Freshly curated for those who live beautifully — our newest pieces are made to be felt as much as worn."
+    </p>
+  </div>
+</section>
+
+<!-- HIGHLIGHT CARDS -->
+<section class="section" style="background:var(--ivory);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="overline">Fresh In</span>
+      <h2>This Season's Favourites</h2>
+      <p>Soft new hues, dreamy silhouettes, and fabrics that feel like a reward.</p>
+    </div>
+
+    <div class="arrivals-highlight fade-up">
+      <div class="arrivals-hero-card">
+        <img src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?w=900&q=80" alt="Ivory Dream Set">
+        <div class="card-overlay">
+          <p class="overline" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);margin-bottom:6px;">New — Satin Sets</p>
+          <h3>The Ivory Dream Set</h3>
+          <p>Weightless satin with delicate piped edges. Made for your most beautiful evenings.</p>
+          <button class="btn btn-gold" style="font-size:11px;padding:12px 28px;" onclick="openProductModal(2)">Quick View</button>
+        </div>
+      </div>
+
+      <div class="arrivals-hero-card">
+        <img src="https://images.unsplash.com/photo-1523359346063-d879354c0ea5?w=900&q=80" alt="Cashmere Dream Robe">
+        <div class="card-overlay">
+          <p class="overline" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);margin-bottom:6px;">New — Robes</p>
+          <h3>The Cashmere Dream Robe</h3>
+          <p>The ultimate wrap. Cashmere-blend in champagne contrast piping — the gift of pure luxury.</p>
+          <button class="btn btn-gold" style="font-size:11px;padding:12px 28px;" onclick="openProductModal(12)">Quick View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- New arrivals product grid -->
+    <div style="margin-top:60px;">
+      <div class="section-header fade-up">
+        <span class="overline">All New</span>
+        <h2>New Arrivals</h2>
+      </div>
+      <div class="product-grid" id="arrivals-products"></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS TEASER BANNER -->
+<section style="background:var(--charcoal);padding:80px 0;text-align:center;">
+  <div class="container">
+    <span class="overline" style="color:var(--gold-light);display:block;font-size:10.5px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;margin-bottom:16px;">Never Miss a Drop</span>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,4vw,3rem);font-weight:300;color:var(--ivory);margin-bottom:14px;">Be First to Know</h2>
+    <p style="font-size:.95rem;color:rgba(250,247,242,.6);font-weight:300;margin-bottom:36px;">Join our inner circle and get early access to new arrivals before anyone else.</p>
+    <form class="newsletter-form" style="max-width:420px;margin:0 auto;" onsubmit="return false;">
+      <input type="email" placeholder="Your email address">
+      <button type="submit" class="btn btn-gold">Notify Me</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Soma  <span>Nights</span></a>
+        <p>Luxury nightwear for women who believe every evening deserves beauty.</p>
+        <div class="footer-socials">
+          <a href="contact.html" class="social-btn"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="contact.html" class="social-btn"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="shop.html">Satin Sets</a></li>
+          <li><a href="shop.html">Pajama Sets</a></li>
+          <li><a href="shop.html">Sleep Dresses</a></li>
+          <li><a href="shop.html">Robes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p style="font-size:.85rem;color:rgba(250,247,242,.5);line-height:1.9;font-weight:300;">
+          Los Angeles, California, USA<br>+1 (310) 555-8421<br>hello@Soma nights.com
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Soma Hearts. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-backdrop" id="product-modal">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close">✕</button>
+    <div class="modal-inner">
+      <div class="modal-img-wrap"><img src="" alt=""></div>
+      <div class="modal-body">
+        <div class="modal-category"></div>
+        <h2 class="modal-name"></h2>
+        <div class="modal-price"></div>
+        <p class="modal-desc"></p>
+        <div class="modal-features"></div>
+        <button class="btn btn-primary order-btn" style="width:100%;justify-content:center;">Order Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="order-popup">
+  <div class="order-popup">
+    <button class="modal-close" style="position:absolute;top:18px;right:18px;">✕</button>
+    <div class="order-popup-icon">🌙</div>
+    <h3>Order Unavailable</h3>
+    <p>We are unable to process your order at this moment. Please try again soon or contact hello@Soma nights.com</p>
+    <button class="btn btn-primary dismiss-btn" style="width:100%;justify-content:center;">Close</button>
+  </div>
+</div>
+
+<button class="back-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

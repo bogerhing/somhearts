@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All — Soma Hearts</title>
+  <meta name="description" content="Shop all Soma Hearts luxury nightwear. Satin sets, pajama sets, sleep dresses and robes from $29–$129.">
+  <link rel="icon" href="https://em-content.zobj.net/source/twitter/376/crescent-moon_1f319.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo" style="color:var(--charcoal);">Soma  <span style="color:var(--champagne)">Hearts</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <a href="shop.html"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></a>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+<nav class="mobile-nav">
+  <button class="mobile-close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="new-arrivals.html">New Arrivals</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero" style="margin-top:var(--nav-h);">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <span class="overline">Our Collection</span>
+    <h1>Shop All</h1>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="section">
+  <div class="container">
+
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Shop</span>
+    </nav>
+
+    <div class="shop-layout">
+
+      <!-- SIDEBAR -->
+      <aside class="shop-sidebar">
+        <div class="sidebar-section">
+          <h4>Categories</h4>
+          <div class="filter-list">
+            <label class="filter-item">
+              <input type="checkbox">
+              <span class="filter-label">Satin Sets</span>
+              <span class="filter-count">4</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              <span class="filter-label">Pajama Sets</span>
+              <span class="filter-count">4</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              <span class="filter-label">Sleep Dresses</span>
+              <span class="filter-count">4</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              <span class="filter-label">Robes</span>
+              <span class="filter-count">4</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h4>Price Range</h4>
+          <div class="price-range">
+            <input type="text" placeholder="$29">
+            <span style="color:var(--text-light);font-size:.85rem;">–</span>
+            <input type="text" placeholder="$129">
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h4>Fabric</h4>
+          <div class="filter-list">
+            <label class="filter-item">
+              <input type="checkbox">
+              <span class="filter-label">Satin</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              <span class="filter-label">Modal</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              <span class="filter-label">Cotton</span>
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              <span class="filter-label">Velvet</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- PRODUCTS -->
+      <div class="shop-main">
+        <div class="shop-header">
+          <p class="shop-count">12 Products</p>
+          <select class="sort-select">
+            <option value="default">Sort: Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="newest">Newest First</option>
+          </select>
+        </div>
+        <div class="product-grid" id="shop-products">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="container">
+    <span class="overline">Stay in the Loop</span>
+    <h2>Join the Soma  Circle</h2>
+    <p>New arrivals, exclusive offers, and dreamy content delivered to your inbox.</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email address">
+      <button type="submit" class="btn btn-gold">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Soma  <span>Nights</span></a>
+        <p>Luxury nightwear crafted for the woman who believes every evening deserves a touch of beauty.</p>
+        <div class="footer-socials">
+          <a href="contact.html" class="social-btn"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="contact.html" class="social-btn"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="contact.html" class="social-btn"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop All</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="shop.html">Satin Sets</a></li>
+          <li><a href="shop.html">Pajama Sets</a></li>
+          <li><a href="shop.html">Sleep Dresses</a></li>
+          <li><a href="shop.html">Robes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p style="font-size:.85rem;color:rgba(250,247,242,.5);line-height:1.9;font-weight:300;">
+          Los Angeles, California, USA<br>
+          +1 (310) 555-8421<br>
+          hello@Soma nights.com
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Soma Hearts. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="modal-backdrop" id="product-modal">
+  <div class="modal" style="position:relative;">
+    <button class="modal-close">✕</button>
+    <div class="modal-inner">
+      <div class="modal-img-wrap"><img src="" alt=""></div>
+      <div class="modal-body">
+        <div class="modal-category"></div>
+        <h2 class="modal-name"></h2>
+        <div class="modal-price"></div>
+        <p class="modal-desc"></p>
+        <div class="modal-features"></div>
+        <button class="btn btn-primary order-btn" style="width:100%;justify-content:center;">Order Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER POPUP -->
+<div class="modal-backdrop" id="order-popup">
+  <div class="order-popup">
+    <button class="modal-close" style="position:absolute;top:18px;right:18px;">✕</button>
+    <div class="order-popup-icon">🌙</div>
+    <h3>Order Unavailable</h3>
+    <p>We are unable to process your order at this moment. Please check back soon or contact us at hello@Soma nights.com</p>
+    <button class="btn btn-primary dismiss-btn" style="width:100%;justify-content:center;">Close</button>
+  </div>
+</div>
+
+<button class="back-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
